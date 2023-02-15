@@ -8,7 +8,7 @@
     --sans-style: verdana, sans-serif;
     --serif-style: georgia, serif;
 
-    --banner-height: 10%;
+    --banner-height: 20%;
 }
 
 * {
@@ -26,7 +26,7 @@ html, body {
 
 .flex_parent {
     display: flex; 
-    height: 85%; width: 100%;
+    height: 80%; width: 100%;
     align-items: flex-end;
     padding: none;
     flex-wrap: wrap;
@@ -61,6 +61,9 @@ html, body {
     background-color: var(--main-color-back);
 }
 
+/*
+* The following provides animated menu bars
+*/
 .link {
     text-align: right;
     width: 100%;
@@ -102,10 +105,13 @@ button:hover span:after {
     right: 0;
     color: var(--color-main-back);
 }
-
-a.menu {
+a.menu { 
     text-decoration: none;
 }
+
+/*
+* The following provides animated menu bars
+*/
 
 .separater {
     width: 60%;
@@ -126,13 +132,6 @@ a.menu {
 h1 {
     font-size: 48pt;
     text-align: center;
-}
-
-iframe {
-    width: 60%;
-    height: 400pt;
-    margin-left: 20%;
-    margin-top: 5%;
 }
 
 /*
@@ -174,19 +173,24 @@ iframe {
 
     .sidebar {
         display: inline-block; 
-        height: auto; width: 100%; 
+        height: min-content; width: 100%;
+        padding: none;
         background-color: var(--side-color-back);
     }
 
     .main {
         display: inline-block;
         width: 100%; 
-        height: auto; 
+        height: fit-content; 
         overflow-y: auto;
         background-color: var(--main-color-back);
         flex: 1; 
         padding-left: 20pt;
         padding-right: 20pt;
+    }
+
+    img.cart {
+        display: none;
     }
 
     .spacer {
