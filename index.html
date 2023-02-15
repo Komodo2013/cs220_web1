@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Week 2's assignment">
+        <meta name="keywords" content="Week 2, about, Jacob">
+        <meta name="author" content="Jacob Larsen">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <title>About Me</title>
+
+        <script type="text/javascript">    
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
+            }, false);
+
+            function popup(){
+                document.getElementById("mypdf").style.display = "block"
+
+                alert("The pdf is now displayed below");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="banner">
+            <p class="banner-content">Regal Photos</p>
+        </div>
+        <div class="flex_parent">
+            <div id="menubar" class="sidebar">
+                <div class="spacer"></div>
+                <a class="menu" href="#"><button class="link"><span>Images</span></button></a>
+                <a class="menu" href="#"><button class="link"><span>Cart</span></button></a>
+            </div>
+
+            <div id="main" class="main">
+                <div class="spacer"></div>
+                
+                <div class="spacer"></div>
+                <h1>Javascript</h1>
+                <div class="minispacer"></div>
+                <hr class="separater"/>
+                <div class="minispacer"></div>
+                <div>
+                    
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p class="banner-content" id="cp">copyright here</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,171 @@
+:root {
+    --color-main-back: #423e44;
+    --color-main-text: #f6f5f2;
+    --color-secondary: #997565;
+    --color-tertiary1: #baa37d;
+    --color-tertiary2: #869ba8;
+
+    --sans-style: verdana, sans-serif;
+    --serif-style: georgia, serif;
+
+    --banner-height: 10%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html, body {
+    box-sizing: border-box;
+    height: 100%; width: 100%;
+    position: absolute;
+    background-color: var(--color-main-back);
+    color: var(--color-main-text);
+}
+
+.flex_parent {
+    display: flex; 
+    height: 95%; width: 100%;
+    align-items: flex-end;
+    padding: none;
+    flex-wrap: wrap;
+}
+
+.banner {
+    height: var(--banner-height);
+    min-height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 5%;
+    min-height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.sidebar {
+    background-color: var(--main-color-back);
+}
+
+.link {
+    text-align: right;
+    width: 100%;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    font-size: 20pt;
+    color: var(--color-tertiary1);
+    background-color: var(--color-main-back);
+    transition-duration: .5s;
+    border: none;
+}
+.link:hover {
+    background-color: var(--color-tertiary1);
+    color: var(--color-main-back);
+}
+
+a.menu {
+    text-decoration: none;
+}
+
+.separater {
+    width: 60%;
+    margin-left: 20%;
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+}
+
+.para {
+    font: var(--serif-style);
+    width: 50%;
+    padding-left: 25%;
+    font-size: 22pt;
+}
+
+h1 {
+    font-size: 48pt;
+    text-align: center;
+}
+
+iframe {
+    width: 60%;
+    height: 400pt;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+/*
+* The following provides functionality for dynamically adjusting layout for mobile devices smaller tpthan tablets.
+*/
+/* Support for landscape tablets and devices with larger screens */
+@media screen and (min-width: 901px) {
+    .sidebar {
+        display: inline-block; 
+        height: 100%; width: 20%; 
+        background-color: var(--side-color-back);
+    }
+
+    .main {
+        display: inline-block;
+        width: 80%; 
+        height: 100%; 
+        overflow-y: auto;
+        background-color: var(--main-color-back);
+        flex: 1; 
+        padding-left: 20pt;
+        padding-right: 20pt;
+    }
+
+    .spacer {
+        height: 5%;
+    }
+    
+    .minispacer {
+        height: 2%;
+    }
+}
+/* support for devices smaller than landscape tablets */
+@media screen and (max-width: 900px) {
+    .link {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .sidebar {
+        display: inline-block; 
+        height: auto; width: 100%; 
+        background-color: var(--side-color-back);
+    }
+
+    .main {
+        display: inline-block;
+        width: 100%; 
+        height: auto; 
+        overflow-y: auto;
+        background-color: var(--main-color-back);
+        flex: 1; 
+        padding-left: 20pt;
+        padding-right: 20pt;
+    }
+
+    .spacer {
+        height: 20pt;
+    }
+    
+    .minispacer {
+        height: 10pt;
+    }
+}
+
