@@ -4,30 +4,46 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Week 2's assignment">
-        <meta name="keywords" content="Week 2, about, Jacob">
-        <meta name="author" content="Jacob Larsen">
+        <meta name="description" content="More about this image">
+        <meta name="keywords" content="Regal Photos, image details">
+        <meta name="author" content="Jacob Larsen, Seth McCullough">
 
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="image_screen.css">
 
-        <title>About Me</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Image Details</title>
 
         <script type="text/javascript">    
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
+
+                // Cookies for loaging current image to load
+                if(get_cookie_attribute("image_name=") != null) {
+                    let image_path = "assets/" + get_cookie_attribute("image_name=")
+                    document.getElementById("image_selection").src = image_path;
+                }
             }, false);
 
-            function popup(){
-                document.getElementById("mypdf").style.display = "block"
-
-                alert("The pdf is now displayed below");
+            function get_cookie_attribute(attr) {
+                let dcookie = decodeURIComponent(document.cookie).split(";");
+                
+                for(let i = 0; i < dcookie.length; i++){
+                    let s = dcookie[i].trim();
+                    if(s.indexOf(attr) == 0) {
+                        return dcookie[i].substring(attr.length)
+                    }
+                }
+                return null;
             }
+
         </script>
     </head>
     <body>
         <div class="banner">
-            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos"></a>
-            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart" style="position: absolute; max-width: 75px; max-height: 75px; top: 50px; right: 100px;"></a>
+            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos" style="width: 85%; top: 5%"></a>
+            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart" style="position: absolute; top: 2%; right: 3%; width: 10%; max-width: 100px; max-height: 100px;"></a>
         </div>
         <div class="flex_parent">
             <div id="menubar" class="sidebar">
@@ -38,8 +54,23 @@
 
             <div id="main" class="main">
                 
-                <div>
-                    
+                <div class="img_select">
+                    <div>
+                        <img src="assets/Ducks.jpg" alt="Selected Image here" id="image_selection" class="image">
+                    </div>
+                    <div class="row">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <p id="price" class="price">$0.00</p>
+                    </div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur adipisci asperiores, molestias, perferendis voluptates quia temporibus expedita ipsa quibusdam porro debitis reiciendis. Sit iure blanditiis aliquid sed. Earum, animi? Neque.</p>
+                    </div>
                 </div>
             </div>
             

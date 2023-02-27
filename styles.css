@@ -26,7 +26,7 @@ html, body {
 
 .flex_parent {
     display: flex; 
-    height: 80%; width: 100%;
+    height: 75%; width: 100%;
     align-items: flex-end;
     padding: none;
     flex-wrap: wrap;
@@ -187,10 +187,6 @@ h1 {
         flex: 1; 
         padding-left: 20pt;
         padding-right: 20pt;
-    }
-
-    img.cart {
-        display: none;
     }
 
     .spacer {

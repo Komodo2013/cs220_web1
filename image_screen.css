@@ -1,0 +1,57 @@
+:root {
+    --color-main-back: #423e44;
+    --color-main-text: #f6f5f2;
+    --color-secondary: #997565;
+    --color-tertiary1: #baa37d;
+    --color-tertiary2: #869ba8;
+
+    --sans-style: verdana, sans-serif;
+    --serif-style: georgia, serif;
+
+    --banner-height: 20%;
+}
+
+.img_select {
+    width: 60%;
+    padding-left: 20%;
+    padding-top: 5%;
+}
+
+.image {
+    height: auto;
+    max-width: 100%;
+}
+
+.row {
+    padding-top: 10pt;
+}
+
+.price {
+    float: right;
+    text-align-last: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.checked {
+    color: orange;
+}
+
+.description {
+    padding-top: 20pt;
+}
+
+/*
+* The following provides functionality for dynamically adjusting layout for mobile devices smaller tpthan tablets.
+*/
+/* Support for landscape tablets and devices with larger screens */
+@media screen and (min-width: 901px) {
+}
+/* support for devices smaller than landscape tablets */
+@media screen and (max-width: 900px) {
+}
+
