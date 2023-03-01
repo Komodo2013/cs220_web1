@@ -9,7 +9,13 @@
 }
 
 /* Set Pictures to be defaulted to be hidden*/
-.pictureSlides{
+.slideShow1{
+	display: none;
+}
+.slideShow2{
+	display: none;
+}
+.slideShow3{
 	display: none;
 }
 
