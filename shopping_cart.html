@@ -9,7 +9,6 @@
         <meta name="author" content="Jacob Larsen">
 
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="shopping_cart.css">
 
         <title>About Me</title>
 
@@ -27,8 +26,8 @@
     </head>
     <body>
         <div class="banner">
-            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos" class="banner_image"></a>
-            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart"></a>
+            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos"></a>
+            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart" style="position: absolute; max-width: 75px; max-height: 75px; top: 50px; right: 100px;"></a>
         </div>
         <div class="flex_parent">
             <div id="menubar" class="sidebar">
@@ -38,47 +37,12 @@
             </div>
 
             <div id="main" class="main">
-                <div class="cart">
+                
+                <div>
                     
                 </div>
-                <form>
-                    <div class="form">
-                        <div class="column1">
-                            <label for="name"><i class="fa fa-user"></i>Your Name</label>
-                            <input type="tex" id="name" name="name" placeholder="John Doe">
-                            
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="youremail@example.com">
-                            
-                            <label for="address">Billing Address</label>
-                            <input type="text" id="address" name="address" placeholder="123 B Baker Street">
-                            
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city" placeholder="New York City">
-                            
-                            <label for="state">State</label>
-                            <input type="text" id="state" name="state" placeholder="NY">
-                            
-                            <label for="zip">Zip</label>
-                            <input type="text" id="zip" name="zip" placeholder="10001">
-                        </div>
-                        <div class="column2">
-                            <label for="card_name">Name on card</label>
-                            <input type="text" id="card_name" name="card_name" placeholder="John Doe">
-                            
-                            <label for="card_num">Card number</label>
-                            <input type="text" id="card_num" name="card_num" placeholder="1111-2222-3333-4444">
-                            
-                            <label for="card_expire">Expires</label>
-                            <input type="text" id="card_expire" name="card_expire" placeholder="09/24">
-                            
-                            <label for="card_secure">Security Key</label>
-                            <input type="text" id="card_secure" name="card_secure" placeholder="###">
-                        </div>
-                    </div>
-                </form>
-			</div>
-
+            </div>
+            
             <div class="footer">
                 <p class="banner-content" id="cp">copyright here</p>
             </div>
