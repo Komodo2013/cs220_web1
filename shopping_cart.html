@@ -16,13 +16,15 @@
         <script type="text/javascript">    
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
+                
+                for(let i = 0; i < 5; i++) {
+                    var node = document.createElement('li');
+                    node.appendChild(document.createTextNode('Scooter'));
+                
+                    document.getElementById('cart_list').appendChild(node);
+                }
+                
             }, false);
-
-            function popup(){
-                document.getElementById("mypdf").style.display = "block"
-
-                alert("The pdf is now displayed below");
-            }
         </script>
     </head>
     <body>
@@ -38,12 +40,16 @@
             </div>
 
             <div id="main" class="main">
-                <div class="cart">
-                    
+                <div class="cart_items">
+                    <h3>Cart</h3>
+                    <ul class="bulletless" id="cart_list">
+
+                    </ul>
                 </div>
                 <form>
                     <div class="form">
                         <div class="column1">
+                            <h3>Billing information</h3>
                             <label for="name"><i class="fa fa-user"></i>Your Name</label>
                             <input type="tex" id="name" name="name" placeholder="John Doe">
                             
