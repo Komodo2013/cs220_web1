@@ -9,19 +9,30 @@
         <meta name="author" content="Jacob Larsen">
 
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="order_completion.css">
 
         <title>About Me</title>
+        
+        <script type="text/javascript" src="fireworks.js"></script>
 
         <script type="text/javascript">    
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
-            }, false);
 
-            function popup(){
-                document.getElementById("mypdf").style.display = "block"
+                let name = ""
+                let num = Math.floor(Math.random() * 10000000)
 
-                alert("The pdf is now displayed below");
-            }
+                var queryString = window.location.search.replace(/^\?/, '');
+                queryString.split(/\&/).forEach(function(keyValuePair) {
+                    name = keyValuePair.replace(/^[^=]*\=/, "").trim();
+                });
+                name = name.replace(/\%20/, " ");
+
+                document.getElementById('name').innerHTML = "Thank you " + name + "!"
+                document.getElementById('order').innerHTML = "Order number: " + num
+            })
+
+
         </script>
     </head>
     <body>
@@ -37,9 +48,12 @@
             </div>
 
             <div id="main" class="main">
+                <canvas id='fireworks' width='100%' height='100%' style="position: absolute;"></canvas>
                 
-                <div>
-                    
+                <div class="order_message">
+                    <h2 id="name">Thank you name!</h2>
+                    <h3 id="order">Order number: </h3>
+                    <h3>Please check your email to retreive your items.</h3>
                 </div>
             </div>
             

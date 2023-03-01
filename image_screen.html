@@ -60,18 +60,6 @@
                 }
             }, false);
 
-            function get_cookie_attribute(attr) {
-                let dcookie = decodeURIComponent(document.cookie).split(";");
-                
-                for(let i = 0; i < dcookie.length; i++){
-                    let s = dcookie[i].trim();
-                    if(s.indexOf(attr) == 0) {
-                        return dcookie[i].substring(attr.length)
-                    }
-                }
-                return null;
-            }
-
             function add_to_cart(){
                 let cart_items = []
                 try {
@@ -88,9 +76,6 @@
                 }
                 console.log(document.cookie)
             }
-        </script>
-        <script type="text/javascript">
-
         </script>
     </head>
     <body>

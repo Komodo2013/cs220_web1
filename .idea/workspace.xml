@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60127f83-3388-4cab-aa5e-9a4eb2efefd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Bridge2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Bridge.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Ducks2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Ducks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Geese2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Geese.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Neighborhood4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Neighborhood.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Ocean3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Ocean.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/PeriodicSprings1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/PeriodicSprings.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/RiverAfton1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/RiverAfton.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/RiverBridge4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/RiverBridge.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/SilversLakeFlat1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/SilversLakeFlat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sunset1-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sunset1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sunset2-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sunset2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Tunnel1-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Tunnel1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Tunnel2-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Tunnel2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs220_web1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/descriptions.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/descriptions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/image_screen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_completion.html" beforeDir="false" afterPath="$PROJECT_DIR$/order_completion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonweb.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MQIqaDCSG2Jmvd75alM9hD48eB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="cs220_web1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="cs220_web1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60127f83-3388-4cab-aa5e-9a4eb2efefd7" name="Changes" comment="" />
+      <created>1677693573302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677693573302</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

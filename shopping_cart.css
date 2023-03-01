@@ -22,16 +22,21 @@
     font-family: cursive;
 }
 .cart_items {
-    height: 100pt;
-    overflow-y: scroll;
+    height: 120pt;
+    padding: 5%;
+    width: 30%;
+    margin-right: 5%;
+    overflow-y: auto;
     float: left;
 }
 .form {
     height: fit-content;
     float: right;
+    width: 50%;
+    margin-right: 5%;
 }
 
-label, input {
+label, input{
     display: block;
     padding: 3pt;
     width: 70%;
@@ -42,6 +47,51 @@ ul.bulletless {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+li, h4 {
+    white-space: break-spaces;
+}
+
+button.place {
+    margin-top: 25pt;
+    margin-left: 17%;
+    width: 70%;
+    padding: 5pt;
+    border-radius: 10px;
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+    background-color: var(--color-main-text);
+    font-size: 15pt;
+}
+button.place:hover {
+    border-color: var(--color-main-text);
+    color: var(--color-main-text);
+    background-color: var(--color-main-back);
+    font-size: 15pt;
+}
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10pt;
+    transition: all 0.5s ease;
+    color: var(--color-secondary);
+}
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+}
+button:hover span {
+    padding-right: 17pt;
+}
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+    color: var(--ccolor-secondary);
 }
 
 /*

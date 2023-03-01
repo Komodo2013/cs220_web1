@@ -1,0 +1,62 @@
+:root {
+    --color-main-back: #423e44;
+    --color-main-text: #f6f5f2;
+    --color-secondary: #997565;
+    --color-tertiary1: #baa37d;
+    --color-tertiary2: #869ba8;
+
+    --sans-style: verdana, sans-serif;
+    --serif-style: georgia, serif;
+
+    --banner-height: 20%;
+}
+
+.order_message{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+    font-family: cursive;
+}
+h2 {
+    font-size: 30pt;
+}
+h3 {
+    font-size: 20pt;
+}
+
+/*
+* The following provides functionality for dynamically adjusting layout for mobile devices smaller tpthan tablets.
+*/
+/* Support for landscape tablets and devices with larger screens */
+@media screen and (min-width: 901px) {
+
+    .form {
+        width: 50%;
+    }
+    .column1 {
+        display: inline-block;
+        margin-left: 7%;
+        margin-right: 6%;
+        width: 40%;
+    }
+    .column2 {
+        float: right;
+        margin-right: 7%;
+        width: 40%;
+    }
+}
+/* support for devices smaller than landscape tablets */
+@media screen and (max-width: 900px) {
+
+    .column1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 90%;
+    }
+    .column2 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 90%;
+    }
+}
+

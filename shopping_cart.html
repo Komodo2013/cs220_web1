@@ -13,24 +13,64 @@
 
         <title>About Me</title>
 
-        <script type="text/javascript">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+        <script type="module">    
+            import desc from "/assets/descriptions.json" assert { type: "json"};
+            
+            document.querySelector('#order').addEventListener('click', order)
+
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
                 
-                for(let i = 0; i < 5; i++) {
+                display_cart()
+                
+            }, false);
+
+            function display_cart(){
+                let cart_items = []
+                console.log(desc)
+                try {
+                    cart_items = JSON.parse(Cookies.get('cart'))
+                    let total = 0;
+                    for(let i = 0; i < cart_items.length; i++){
+                        let node = document.createElement('li');
+                        let k = 0;
+
+                        for(let j = 0; j < desc.length; j++){
+                            if(desc[j].name == cart_items[i]) {
+                                k = j;
+                                break;
+                            }
+                        }
+
+                        console.log(cart_items[i], k)
+                        node.appendChild(document.createTextNode(cart_items[i] + "\t".repeat(1 + Math.ceil((26-cart_items[i].length)/4)) + "$" + desc[k].pric));
+                        total += desc[k].pric;
+                        document.getElementById('cart_list').appendChild(node);
+                    }
+
+                    document.getElementById('total').innerHTML = "Total: \t\t\t      $" + total 
+                    
+                } catch (error) {
+                    cart_items = [null]
                     var node = document.createElement('li');
-                    node.appendChild(document.createTextNode('Scooter'));
+                    node.appendChild(document.createTextNode('Cart is empty!'));
                 
                     document.getElementById('cart_list').appendChild(node);
                 }
-                
-            }, false);
+            }
+
+            function order() {
+                window.location = "./order_completion.html?usr=" + document.getElementById('name').value
+            }
         </script>
     </head>
     <body>
         <div class="banner">
-            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos" class="banner_image"></a>
-            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart"></a>
+            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos" style="width: 85%; top: 5%"></a>
+            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart" style="position: absolute; top: 2%; right: 3%; width: 10%; max-width: 100px; max-height: 100px;"></a>
         </div>
         <div class="flex_parent">
             <div id="menubar" class="sidebar">
@@ -42,11 +82,13 @@
             <div id="main" class="main">
                 <div class="cart_items">
                     <h3>Cart</h3>
+                    <hr />
                     <ul class="bulletless" id="cart_list">
 
                     </ul>
+                    <hr />
+                    <h4 id="total"></h4>
                 </div>
-                <form>
                     <div class="form">
                         <div class="column1">
                             <h3>Billing information</h3>
@@ -80,9 +122,10 @@
                             
                             <label for="card_secure">Security Key</label>
                             <input type="text" id="card_secure" name="card_secure" placeholder="###">
+
+                            <button class="place" id="order" onclick="order()"><span>Place Order</span></button>
                         </div>
                     </div>
-                </form>
 			</div>
 
             <div class="footer">
