@@ -19,7 +19,7 @@
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <script type="module">
             //import Cookies from 'js-cookie'
-            import desc from "/descriptions.json" assert { type: "json"};
+            import desc from "/assets/descriptions.json" assert { type: "json"};
             var image = ""
 
             document.querySelector('#add_to_cart').addEventListener('click', add_to_cart)
@@ -95,8 +95,8 @@
     </head>
     <body>
         <div class="banner">
-            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos" class="banner_image"></a>
-            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart"></a>
+            <a href="index.html"><img src="assets/Banner.png" alt="Regal Photos" style="width: 85%; top: 5%"></a>
+            <a href="shopping_cart.html"><img src="assets/Shopping Cart.png" alt="My Cart" class="cart" style="position: absolute; top: 2%; right: 3%; width: 10%; max-width: 100px; max-height: 100px;"></a>
         </div>
         <div class="flex_parent">
             <div id="menubar" class="sidebar">
