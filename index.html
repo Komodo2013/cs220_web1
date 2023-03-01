@@ -17,7 +17,7 @@
         <script type="text/javascript">    
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
-				
+				showSlides(1);
             }, false);
 
             /* Slide Show Control */
@@ -69,7 +69,7 @@
 					
 					<!-- Images -->
                     <div class="pictureSlides">
-						<img src="assets/PeriodicSprings.jpg" style="width:100%" onclick="redirect('PeriodicSprings.jpg')">
+						<img src="assets/PeriodicSprings.jpg" id="ps" style="width:100%; display:block" onclick="redirect('PeriodicSprings.jpg')">
 						<div class="txt">Periodic Springs, Afton, Wyoming</div>
                 	</div>
 					
@@ -89,12 +89,6 @@
 					
             	</div>
 				
-				<!-- Progress Dots -->
-				<div style="text-align:center">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-				</div>
 			</div>
 
             <div class="footer">
