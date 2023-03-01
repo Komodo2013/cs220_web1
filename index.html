@@ -32,8 +32,7 @@
 			function showSlides(num){
 				let i;
 				let slides = document.getElementsByClassName("pictureSlides");
-				if (num > slides.length){num = 1;}
-				if (num < 1){num = slides.length;}
+				slideIndex = slideIndex % slides.length;
 
 				//Set all Pictures to NOT display
 				for(i=0; i < slides.length; i++){
