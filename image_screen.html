@@ -15,24 +15,32 @@
 
         <title>Image Details</title>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <script type="module">
+            //import Cookies from 'js-cookie'
             import desc from "/assets/descriptions.json" assert { type: "json"};
+            var image = ""
 
             document.querySelector('#add_to_cart').addEventListener('click', add_to_cart)
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("cp").innerHTML = "©".concat(new Date().getFullYear());
 
+                var queryString = window.location.search.replace(/^\?/, '');
+                queryString.split(/\&/).forEach(function(keyValuePair) {
+                    image = keyValuePair.replace(/^[^=]*\=/, "").trim();
+                });
+
                 // Cookies for loading current image to load
-                if(get_cookie_attribute("image_name=") != null) {
-                    console.log(get_cookie_attribute("image_name="))
-                    let _img = get_cookie_attribute("image_name=").trim()
-                    let image_path = "assets/" + _img
+                if(image != null) {
+                    console.log(image)
+                    let image_path = "assets/" + image
                     document.getElementById("image_selection").src = image_path;
                     for(let i = 0; i < desc.length; i++) {
-                        if(desc[i].name == _img){
-                            document.getElementById("desc").innerHTML = desc[i].desc
-                            document.getElementById("price").innerHTML = desc[i].pric
-                            for(let j = 0; j < desc.rate; i++) {
+                        if(desc[i].name == image){
+                            document.getElementById("desc").innerHTML = desc[i].desc;
+                            document.getElementById("price").innerHTML = "$".concat(desc[i].pric);
+                            for(let j = 0; j < desc[i].rate; j++) {
                                 document.getElementById("star".concat(j+1)).classList.add("checked");
                             }
                         }
@@ -42,8 +50,8 @@
                     document.getElementById("image_selection").src = image_path;
                     for(let i = 0; i < desc.length; i++) {
                         if(desc[i].name == "Ducks.jpg"){
-                            document.getElementById("desc").innerHTML = desc[i].desc
-                            document.getElementById("price").innerHTML = "$".concat(desc[i].pric)
+                            document.getElementById("desc").innerHTML = desc[i].desc;
+                            document.getElementById("price").innerHTML = "$".concat(desc[i].pric);
                             for(let j = 0; j < desc[i].rate; j++) {
                                 document.getElementById("star".concat(j+1)).classList.add("checked");
                             }
@@ -65,20 +73,18 @@
             }
 
             function add_to_cart(){
-                let cart = get_cookie_attribute("cart=")
-                console.log(cart)
-                if(cart == null) {
-                    const d = new Date();
-                    d.setTime(d.getTime() + (3*24*60*60*1000));
-                    let expires = "expires="+ d.toUTCString();
-                    let value = "cart=" + get_cookie_attribute("image_name=")
-                    document.cookie = value + ";" + expires + ";path=/";
-                } else if(cart.includes(get_cookie_attribute("image_name="))) {
-                    alert("Already added to cart!")
-                } else {
-                    let value = "cart=" + get_cookie_attribute("image_name=")
-                    let divide = document.cookie.indexOf("cart="+5)
-                    document.cookie = document.cookie.slice(0, divide) + value + document.cookie.slice(divide)
+                let cart_items = []
+                try {
+                    cart_items = JSON.parse(Cookies.get('cart'))
+                    if (cart_items.includes(image)) {
+                        alert("Already added to cart!")
+                    } else {
+                        cart_items.push(image)
+                        document.cookie = Cookies.set('cart', JSON.stringify(cart_items))
+                    }
+                } catch (error) {
+                    cart_items = [image]
+                    Cookies.set('cart', JSON.stringify(cart_items));
                 }
                 console.log(document.cookie)
             }

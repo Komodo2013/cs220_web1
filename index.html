@@ -43,6 +43,10 @@
 				//Display current Picture
 				slides[num-1].style.display="block";
 			}
+
+			function redirect(image_name){
+			    window.location = "./image_screen.html?img=" + image_name
+			}
 			
         </script>
     </head>
@@ -65,17 +69,17 @@
 					
 					<!-- Images -->
                     <div class="pictureSlides">
-						<img src="assets/PeriodicSprings.jpg" style="width:100%">
+						<img src="assets/PeriodicSprings.jpg" style="width:100%" onclick="redirect('PeriodicSprings.jpg')">
 						<div class="txt">Periodic Springs, Afton, Wyoming</div>
                 	</div>
 					
 					<div class="pictureSlides">
-						<img src="assets/Bridge.jpg" style="width:100%">
+						<img src="assets/Bridge.jpg" style="width:100%" onclick="redirect('Bridge.jpg')">
 						<div class="txt">This is a bridge.</div>
                 	</div>
 					
 					<div class="pictureSlides">
-						<img src="assets/Ducks.jpg" style="width:100%">
+						<img src="assets/Ducks.jpg" style="width:100%" onclick="redirect('Ducks.jpg')">
 						<div class="txt">Ducks!</div>
                 	</div>
 					
@@ -91,8 +95,8 @@
 					<span class="dot" onclick="currentSlide(2)"></span>
 					<span class="dot" onclick="currentSlide(3)"></span>
 				</div>
-				
-            
+			</div>
+
             <div class="footer">
                 <p class="banner-content" id="cp">copyright here</p>
             </div>
