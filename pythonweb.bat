@@ -1,0 +1,9 @@
+@Echo off
+for /f "delims=[] tokens=2" %%a in ('ping -4 -n 1 %ComputerName% ^| findstr [') do set NetworkIP=%%a
+echo Network IP: %NetworkIP%
+echo go to %NetworkIP%:8000 to access the website
+echo %NetworkIP%:8000 | clip
+
+py -m http.server 8000
+
+pause
