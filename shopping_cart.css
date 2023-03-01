@@ -1,0 +1,82 @@
+:root {
+    --color-main-back: #423e44;
+    --color-main-text: #f6f5f2;
+    --color-secondary: #997565;
+    --color-tertiary1: #baa37d;
+    --color-tertiary2: #869ba8;
+
+    --sans-style: verdana, sans-serif;
+    --serif-style: georgia, serif;
+
+    --banner-height: 20%;
+}
+
+.form, .cart_items{
+    margin-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border: var(--color-secondary);
+    border-radius: 20px;
+    background-color: var(--color-main-text);
+    color: var(--color-secondary);
+    font-family: cursive;
+}
+.cart_items {
+    height: 100pt;
+    overflow-y: scroll;
+    float: left;
+}
+.form {
+    height: fit-content;
+    float: right;
+}
+
+label, input {
+    display: block;
+    padding: 3pt;
+    width: 70%;
+    margin-left: 15%;
+}
+
+ul.bulletless {    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+* The following provides functionality for dynamically adjusting layout for mobile devices smaller tpthan tablets.
+*/
+/* Support for landscape tablets and devices with larger screens */
+@media screen and (min-width: 901px) {
+
+    .form {
+        width: 50%;
+    }
+    .column1 {
+        display: inline-block;
+        margin-left: 7%;
+        margin-right: 6%;
+        width: 40%;
+    }
+    .column2 {
+        float: right;
+        margin-right: 7%;
+        width: 40%;
+    }
+}
+/* support for devices smaller than landscape tablets */
+@media screen and (max-width: 900px) {
+
+    .column1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 90%;
+    }
+    .column2 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 90%;
+    }
+}
+
