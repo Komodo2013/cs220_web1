@@ -45,6 +45,7 @@ html, body {
 }
 
 .footer {
+    padding-top: 5pt;
     height: 5%;
     min-height: 25px;
     width: 100%;
