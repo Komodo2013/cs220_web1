@@ -28,8 +28,7 @@
 			function slideNum(num){
 				let i;
 				for(i = 0; i < slideIndex.length; i++){
-					slideIndex[i] += num[i];
-					showSlides(slideIndex);
+					showSlides(slideIndex[i] += num[i]);
 				};
 			}
 
@@ -58,9 +57,11 @@
 
 
 				//Display current Picture
+				slides[num-1].style.display="block";
+				
 				slides1[num[1]-1].style.display="block";
-//				slides2[num[2]-1].style.display="block";
-//				slides3[num[3]-1].style.display="block";
+				slides2[num[2]-1].style.display="block";
+				slides3[num[3]-1].style.display="block";
 			}
 
 			function redirect(image_name){
@@ -102,9 +103,6 @@
 						<div class="txt">Silvers Lake Flat Resevior, Utah</div>
                 	</div>
 					
-					  <!-- Next and previous buttons -->
-  					<a class="prev" onclick="slideNum([1,0,0])">&#10094;</a>
-  					<a class="next" onclick="slideNum([-1,0,0])">&#10095;</a>
             	</div>
 				
 				
