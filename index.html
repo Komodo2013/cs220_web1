@@ -21,47 +21,27 @@
             }, false);
 
             /* Slide Show Control */
-			let slideIndex = [1,1,1];
+			let slideIndex = 1;
 			showSlides(slideIndex);
 
 			// Next/Prev Buttons
 			function slideNum(num){
-				let i;
-				for(i = 0; i < slideIndex.length; i++){
-					showSlides(slideIndex[i] += num[i]);
-				};
+				showSlides(slideIndex += num);
 			}
 
-			function showSlides(num){ //num is an array [1,1,1] 3 spaces for 3 slideshows
+			function showSlides(num){
 				let i;
-				let slides1 = document.getElementsByClassName("slideShow1");
-				let slides2 = document.getElementsByClassName("slideShow2");
-				let slides3 = document.getElementsByClassName("slideShow3");
-				
-				//Check to see if num is bigger than the size of the slides1-3 arrays
-				for(i=0; i < num.length; i++){
-					if(num[i] > slides.length){num[i] = 1;}
-					if(num[i] < 1){num[i] = slides.length;}
-				}
+				let slides = document.getElementsByClassName("pictureSlides");
+				if (num > slides.length){num = 1;}
+				if (num < 1){num = slides.length;}
 
 				//Set all Pictures to NOT display
-				for(i=0; i < slides1.length; i++){
-					slides1[i].style.display = "none";
+				for(i=0; i < slides.length; i++){
+					slides[i].style.display = "none";
 				}
-				for(i=0; i < slides2.length; i++){
-					slides2[i].style.display = "none";
-				}
-				for(i=0; i < slides3.length; i++){
-					slides3[i].style.display = "none";
-				}
-
 
 				//Display current Picture
 				slides[num-1].style.display="block";
-				
-				slides1[num[1]-1].style.display="block";
-				slides2[num[2]-1].style.display="block";
-				slides3[num[3]-1].style.display="block";
 			}
 
 			function redirect(image_name){
@@ -87,63 +67,25 @@
 				<!-- Slideshow -->
                 <div class="slideshow-container">
 					
-<!-- Slideshow 1 Images -->
-                    <div class="slideShow1">
-						<img src="assets/PeriodicSprings1.jpg" style="width:100%" onclick="redirect('PeriodicSprings1.jpg')">
-						<div class="txt">Periodic Springs, Afton, Wyoming</div>
-                	</div>
-					
-					<div class="slideShow1">
-						<img src="assets/RiverAfton1.jpg" style="width:100%" onclick="redirect('RiverAfton1.jpg')">
-						<div class="txt">River in Afton, Wyoming</div>
-                	</div>
-					
-					<div class="slideShow1">
-						<img src="assets/SilversLakeFlat1.jpg" style="width:100%" onclick="redirect('SilversLakeFlat1.jpg')">
-						<div class="txt">Silvers Lake Flat Resevior, Utah</div>
-                	</div>
-					
-            	</div>
-				
-				
-<!-- Slideshow 2 Images -->				
-				<div class="slideshow-container">
-
-					<div class="slideShow2">
+					<!-- Images -->
+                    <div class="pictureSlides">
 						<img src="assets/PeriodicSprings.jpg" style="width:100%" onclick="redirect('PeriodicSprings.jpg')">
 						<div class="txt">Periodic Springs, Afton, Wyoming</div>
                 	</div>
 					
-					<div class="slideShow2">
+					<div class="pictureSlides">
 						<img src="assets/Bridge.jpg" style="width:100%" onclick="redirect('Bridge.jpg')">
 						<div class="txt">This is a bridge.</div>
                 	</div>
 					
-					<div class="slideShow2">
+					<div class="pictureSlides">
 						<img src="assets/Ducks.jpg" style="width:100%" onclick="redirect('Ducks.jpg')">
 						<div class="txt">Ducks!</div>
                 	</div>
 					
-            	</div>
-				
-				
-<!-- Slideshow 3 Images -->				
-				<div class="slideshow-container">
-					
-					<div class="slideShow3">
-						<img src="assets/PeriodicSprings.jpg" style="width:100%" onclick="redirect('PeriodicSprings.jpg')">
-						<div class="txt">Periodic Springs, Afton, Wyoming</div>
-                	</div>
-					
-					<div class="slideShow3">
-						<img src="assets/Bridge.jpg" style="width:100%" onclick="redirect('Bridge.jpg')">
-						<div class="txt">This is a bridge.</div>
-                	</div>
-					
-					<div class="slideShow3">
-						<img src="assets/Ducks.jpg" style="width:100%" onclick="redirect('Ducks.jpg')">
-						<div class="txt">Ducks!</div>
-                	</div>
+					<!-- Next / Previous Buttons -->
+					<a class="prev" onclick="slideNum(-1)">&#10094;</a>
+					<a class="next" onclick="slideNum(1)">&#10095;</a>
 					
             	</div>
 				
