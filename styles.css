@@ -1,3 +1,11 @@
+/*
+* This doc is for general styles across the website
+* Version 1.5
+* last edited 1 Mar 2023
+*/
+/*
+* These are global variables
+*/
 :root {
     --color-main-back: #423e44;
     --color-main-text: #f6f5f2;
@@ -109,10 +117,6 @@ button:hover span:after {
 a.menu { 
     text-decoration: none;
 }
-
-/*
-* The following provides animated menu bars
-*/
 
 .separater {
     width: 60%;

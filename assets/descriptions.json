@@ -1,16 +1,66 @@
 [{
   "name": "Bridge.jpg",
-  "desc": "Picture of a brdge. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur adipisci asperiores, molestias, perferendis voluptates quia temporibus expedita ipsa quibusdam porro debitis reiciendis. Sit iure blanditiis aliquid sed. Earum, animi? Neque.",
+  "desc": "Captured from the top of a bridge, this picture shows a row of gummy bears carefully placed on the railing, with a stunning view in the background. The colorful and playful display of candy against the natural scenery creates a whimsical contrast and a unique perspective on the beauty of everyday things.",
   "rate": 3,
-  "pric": 1.99
+  "pric": 2.14
 },{
   "name": "Ducks.jpg",
-  "desc": "Picture of Ducks. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur adipisci asperiores, molestias, perferendis voluptates quia temporibus expedita ipsa quibusdam porro debitis reiciendis. Sit iure blanditiis aliquid sed. Earum, animi? Neque.",
-  "rate": 3,
-  "pric": 1.99
+  "desc": "This picturesque scene captures a pair of ducks floating peacefully in a serene pond. The warm sunlight reflects off the water and casts a gentle glow on the ducks, creating a calm and inviting atmosphere that makes you want to dive right in and join them.",
+  "rate": 5,
+  "pric": 1.74
 },{
   "name": "Geese.jpg",
-  "desc": "Picture of Geese. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur adipisci asperiores, molestias, perferendis voluptates quia temporibus expedita ipsa quibusdam porro debitis reiciendis. Sit iure blanditiis aliquid sed. Earum, animi? Neque.",
+  "desc": "This charming photo captures a pair of geese walking down a scenic trail, surrounded by lush greenery and tall trees. The geese seem at ease in their surroundings, enjoying each other's company as they explore the great outdoors, reminding us of the simple pleasures that can be found in nature's beauty.",
+  "rate": 4,
+  "pric": 2.12
+},{
+  "name": "Neighborhood.jpg",
+  "desc": "This beautiful photo showcases a charming and idyllic rural town, where simplicity and tranquility reign supreme. The architecture and design of the houses, shops, and streets evoke a sense of nostalgia, and the surrounding nature, with its trees and gardens, adds to the beauty and charm of the town. It's a perfect place to slow down, take a deep breath, and savor the simple joys of life.",
+  "rate": 2,
+  "pric": 1.20
+},{
+  "name": "Ocean.jpg",
+  "desc": "This stunning photo captures a moment of sheer beauty and awe-inspiring natural wonder. The ocean, with its vast expanse of blue, and the sun, with its fiery and radiant burst of light, create a truly breathtaking scene. The sunbursts in the photo give an added touch of magic and mystique, making it a picture-perfect moment that will leave you mesmerized and in awe of the beauty of our world.",
+  "rate": 4,
+  "pric": 2.03
+},{
+  "name": "PeriodicSprings.jpg",
+  "desc": "Periodic Springs, Afton, Wyoming. This captivating image captures the mesmerizing sight of water cascading down a steep slope, creating a truly awe-inspiring display of nature's beauty. The soothing sound of the water gently falling and splashing against the rocks can almost be heard in the photo, transporting you to a tranquil state of mind. It's a reminder of the power and grace of water, and its ability to create peacefulness and serenity in even the most tumultuous of environments.",
+  "rate": 5,
+  "pric": 2.24
+},{
+  "name": "RiverAfton.jpg",
+  "desc": "Tranquil waters meander their way through the picturesque terrain, inviting a moment of serene reflection.",
+  "rate": 4,
+  "pric": 2.08
+},{
+  "name": "RiverBridge.jpg",
+  "desc": "A simple little bridge crosses over the tranquil river, offering a serene escape into the natural beauty of the surrounding woods.",
+  "rate": 4,
+  "pric": 2.08
+},{
+  "name": "SilverLakeFlat.jpg",
+  "desc": "The stunning beauty of this scene is truly unparalleled. The still waters of the lake capture the majesty of the towering mountains in their reflection, creating a mesmerizing panorama that's almost too perfect to be real. This breathtaking landscape is a true testament to the artistry of nature, and a reminder of the immense power and beauty that surrounds us every day.",
+  "rate": 5,
+  "pric": 2.62
+},{
+  "name": "Sunset1.jpg",
+  "desc": "There's something truly magical about watching the sun dip below the horizon at the end of a long day. As the fiery orb slowly sinks into the ocean, it creates a blaze of color that seems almost otherworldly. The vibrant hues of orange, pink, and red are reflected in the shimmering waves, creating a stunning display that captures the raw beauty and power of nature. Whether you're watching alone or sharing the moment with someone special, a sunset over the ocean is a moment that will stay with you forever.",
   "rate": 3,
-  "pric": 1.99
+  "pric": 1.66
+},{
+  "name": "Sunset2.jpg",
+  "desc": "As the sun dips below the horizon, the sky explodes in a riot of hues, while the ocean mirrors the stunning display, creating a breathtaking vista that's almost too beautiful to behold.",
+  "rate": 2,
+  "pric": 1.31
+},{
+  "name": "Tunnel1.jpg",
+  "desc": "Nature's breathtaking masterpiece: A tunnel of intertwining tree roots, a living sculpture that evokes a sense of wonder and awe.",
+  "rate": 4,
+  "pric": 1.93
+},{
+  "name": "Tunnel2.jpg",
+  "desc": "Nature's breathtaking masterpiece: A tunnel of intertwining tree roots, a living sculpture that evokes a sense of wonder and awe.",
+  "rate": 3,
+  "pric": 1.67
 }]

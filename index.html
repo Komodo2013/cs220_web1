@@ -28,6 +28,7 @@
 			function slideNum(num){
 				let slides = document.getElementsByClassName("pictureSlides");
 				slideIndex = (slideIndex + num) % slides.length;
+				if(slideIndex < 0) {slideIndex = slides.length -1}
 				showSlides(slideIndex);
 			}
 
@@ -68,20 +69,57 @@
 					
 					<!-- Images -->
                     <div class="pictureSlides">
-						<img src="assets/PeriodicSprings.jpg" id="ps" style="width:100%; display:block" class="slide_image" onclick="redirect('PeriodicSprings.jpg')">
-						<div class="txt">Periodic Springs, Afton, Wyoming</div>
+						<img src="assets/PeriodicSprings.jpg" style="display:block" class="slide_image" onclick="redirect('PeriodicSprings.jpg')">
                 	</div>
 					
 					<div class="pictureSlides">
-						<img src="assets/Bridge.jpg" style="width:100%" class="slide_image" onclick="redirect('Bridge.jpg')">
-						<div class="txt">This is a bridge.</div>
+						<img src="assets/Bridge.jpg" class="slide_image" onclick="redirect('Bridge.jpg')">
                 	</div>
 					
 					<div class="pictureSlides">
-						<img src="assets/Ducks.jpg" style="width:100%" class="slide_image" onclick="redirect('Ducks.jpg')">
-						<div class="txt">Ducks!</div>
+						<img src="assets/Ducks.jpg" class="slide_image" onclick="redirect('Ducks.jpg')">
                 	</div>
-					
+
+                    <div class="pictureSlides">
+                        <img src="assets/Geese.jpg" class="slide_image" onclick="redirect('Geese.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/Neighborhood.jpg" class="slide_image" onclick="redirect('Neighborhood.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/Ocean.jpg" style="width:100%" class="slide_image" onclick="redirect('Ocean.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/RiverAfton.jpg" id="ps" class="slide_image" onclick="redirect('RiverAfton.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/RiverBridge.jpg" style="width:100%" class="slide_image" onclick="redirect('RiverBridge.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/SilversLakeFlat.jpg" class="slide_image" onclick="redirect('SilversLakeFlat.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/Sunset1.jpg" style="width:100%" class="slide_image" onclick="redirect('Sunset1.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/Sunset2.jpg" style="width:100%" class="slide_image" onclick="redirect('Sunset2.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/Tunnel1.jpg" style="width:100%" class="slide_image" onclick="redirect('Tunnel1.jpg')">
+                    </div>
+
+                    <div class="pictureSlides">
+                        <img src="assets/Tunnel2.jpg" style="width:100%" class="slide_image" onclick="redirect('Tunnel2.jpg')">
+                    </div>
+
 					<!-- Next / Previous Buttons -->
 					<a class="prev" onclick="slideNum(-1)">&#10094;</a>
 					<a class="next" onclick="slideNum(1)">&#10095;</a>

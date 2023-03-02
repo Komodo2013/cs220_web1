@@ -1,3 +1,8 @@
+/*
+* This doc is for styles regarding the slideshow
+* Version 1.2
+* last edited 1 Mar 2023
+*/
 @charset "utf-8";
 
 * {box-sizing:border-box}
@@ -12,9 +17,9 @@
 .pictureSlides{
 	display: none;
 	animation-name: fade;
-	animation-duration: 1s;
+	animation-duration: 2s;
 }
-@keyframes fade {
+@keyframes fade {/* Animation for fade in */
 	from {opacity: 0}
 	to {opacity: 1;}
 }
@@ -22,6 +27,7 @@
 .slide_image {
 	border-radius: 50px;
 	border-color: black;
+	width: 100%;
 }
 
 /* Next and Prev Buttons */
