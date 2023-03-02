@@ -68,3 +68,5 @@ function explode() {
   });
   window.requestAnimationFrame(explode);
 }
+
+function end() {context = null; return;}
