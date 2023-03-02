@@ -11,6 +11,17 @@
 /* Set Pictures to be defaulted to be hidden*/
 .pictureSlides{
 	display: none;
+	animation-name: fade;
+	animation-duration: 1s;
+}
+@keyframes fade {
+	from {opacity: 0}
+	to {opacity: 1;}
+}
+
+.slide_image {
+	border-radius: 50px;
+	border-color: black;
 }
 
 /* Next and Prev Buttons */
